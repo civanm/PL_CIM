@@ -3,9 +3,12 @@
             .controller('Shell', Shell);
 
     /* @ngInject */
-    function Shell() {
-        var model = this;
+    function Shell($mdSidenav) {
+        var shell = this;
 
+        shell.toggleSidenav = function () {
+            $mdSidenav('left').toggle();
+        };
     }
 
 }());

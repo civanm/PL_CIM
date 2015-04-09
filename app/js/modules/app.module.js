@@ -8,6 +8,7 @@
 
     //adds the applications modules
     angular.module('app', [
+        'ngMaterial',
         'app.core',
         'app.layout',
         'app.widgets'

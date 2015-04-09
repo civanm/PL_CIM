@@ -1,0 +1,68 @@
+
+.container-well{
+
+    padding: 0 15px;
+    margin:0 auto;
+    @media (min-width: 768px){
+        max-width: 750px;
+    }   
+    @media (min-width: 992px){
+        width: 970px;
+    } 
+    @media (min-width: 1200px){
+        width: 1070px;
+    }
+
+
+}
+
+/* Toolbar area */
+md-toolbar{
+    .box-shadow(none);
+    &.md-default-theme {
+        background-color:rgba(170, 138, 110, 0.09);
+    } 
+    h1 {
+        margin: auto;
+    }
+    .menu {
+        background-color: transparent;
+        border: none;
+        height: 38px;
+        margin: 16px;
+        width: 36px;
+    }
+    .icon-bar {
+        background-color: #fff;
+    }
+    .icon-bar+.icon-bar {
+        margin-top: 4px;
+    }
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+    }
+}
+
+
+/* Sidenav area */
+md-sidenav{
+    .background-gradient();
+}
+
+md-list {
+    .md-button {
+        color: inherit;
+        font-weight: 500;
+        text-align: left;
+        width: 100%;
+    }  
+    .md-button.selected {
+        color: #03a9f4;
+    }
+    md-list {
+        padding: 0px 0px 8px 0px;
+    }
+}

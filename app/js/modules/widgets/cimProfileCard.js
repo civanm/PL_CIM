@@ -3,22 +3,22 @@
 
     angular
             .module('app.widgets')
-            .directive('pcLogo', pcLogo);
+            .directive('cimProfileCard', cimProfileCard);
 
-    function pcLogo() {
+    function cimProfileCard() {
         var directive = {
             link: link,
             scope: {
             },
-          //  replace: true,
-            templateUrl: 'views/widgets/pcLogo.html',
+            //  replace: true,
+            templateUrl: 'views/widgets/cimProfileCard.html',
             restrict: 'AE'
         };
         return directive;
 
         function link(scope, element, attrs) {
-           // attrs.$set('class', 'plenty-logo');
+            // attrs.$set('class', 'plenty-logo');
         }
 
     }
-}());
+})();

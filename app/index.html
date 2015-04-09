@@ -4,31 +4,35 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Plenty Code</title>
+        <title>PL CIM</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
 
-
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,900' rel='stylesheet' type='text/css'>
-        <link href="css/plenty-styles.css" rel="stylesheet" type="text/css" />
+        <link href="css/app-styles.css" rel="stylesheet" type="text/css" />
         <base href="./">
     </head>
 
-    <body data-ng-controller="Shell as vm">
+    <body layout="column" data-ng-controller="Shell as shell">
 
-        <section class="wrapper content" data-ng-class="{'open':vm.expandedView}"   data-ng-cloak id="content" >
-            <header ng-click="vm.toggleView()" data-pc-logo="" data-ng-class="{'to-corner':vm.expandedView}" ></header>
+        <header ng-include="'./views/layout/header.html'"> </header>
+        
+        <section class="container-well">
+            <div flex layout="row"  layout-sm="column">
 
-            <article data-ui-view class="plenty-info-box" style='visibility: hidden;'></article>
+                <aside ng-include="'./views/layout/side-nav.html'"></aside>
 
-            <div data-pc-social></div>
-            <footer data-ng-include="'./views/layout/footer.html'"></footer>
+                <div flex>
+                    <section data-cim-profile-card ></section>
+                </div>
+                <div flex>
+                </div>
+            </div>
+
         </section>
-
         <script src="js/bundle.js" type="text/javascript"></script>
+
     </body>
 
 </html>

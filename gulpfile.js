@@ -25,9 +25,9 @@ gulp.task('less', function () {
             }))
             .pipe(gulp.dest('release/css'));
 });
-gulp.task('content', function () {
-    return gulp.src(['content/**/', 'content/*'])
-            .pipe(gulp.dest('release/content'));
+gulp.task('static_content', function () {
+    return gulp.src(['app/static_content/**/', 'app/static_content/*'])
+            .pipe(gulp.dest('release/static_content'));
 });
 
 // JSHint task
@@ -88,7 +88,7 @@ gulp.task('clean', function () {
 });
 
 //default task run it use: gulp
-gulp.task('default', ['jshint', 'js', 'views', 'less', 'watch']);
+gulp.task('default', ['jshint', 'js', 'views','static_content', 'less', 'watch']);
 
 gulp.task('build', ['jshint', 'js', 'clean', 'views', 'less', 'content']);
 
@@ -96,5 +96,5 @@ gulp.task('build', ['jshint', 'js', 'clean', 'views', 'less', 'content']);
 gulp.task('watch', function () {
     gulp.watch('app/less/**/*.less', ['less']);
     gulp.watch(['app/js/*.js', 'app/js/**/*.js'], ['jshint', 'js']);
-    gulp.watch(['app/views/**/*', '*.html'], ['views']);
+    gulp.watch(['app/views/**/*', 'app/*.html'], ['views', 'static_content']);
 });

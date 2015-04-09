@@ -1,0 +1,28 @@
+{
+  "name": "PL_CIM",
+  "version": "1.0.0",
+  "homepage": "https://github.com/civanm/PL_CIM",
+  "authors": [
+    "Carlos Iván Mercado <carlos.mercado@plentycode.com>"
+  ],
+  "description": "Vendors external libs",
+  "main": "index.js",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.8.3"
+  },
+  "exportsOverride": {
+    "*": {
+      "js": "*.js"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.widget-box{
+    background: #fff;
+    .border-radius(5px);
+    .box-shadow(0 0 12px rgba(58, 51, 46, 0.26));
+    margin-bottom: 30px;
+    position: relative;
+
+    .cover-image{
+        height:180px;
+        background-color:#b1a599;
+        .border-radius(5px 5px 0 0);
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            .border-radius(5px 5px 0 0);
+        }
+    }
+    .box-content{
+        position: relative;
+        padding: 15px 10px 21px 111px;
+        min-height: 116px;  
+        h3{
+            font-size: 26px;
+            font-weight: 600;
+            color: #5c5146;
+            margin: 0 0 10px 0;
+        }
+        h6{
+            display: block;
+            color: #8e8071;
+        }
+    }
+    .avatar{
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        width: 89px;
+        height: 89px;
+        overflow: hidden;
+        border: 1px solid #BAB8B3;
+        padding: 7px;
+        &,img{
+            display: block;
+            .border-radius(50%);
+            width: 73px;
+            height: 73px;
+            padding: 0;
+        }
+    }
+    footer{
+        .clearfix();
+        ul{
+            overflow: hidden;
+            .border-radius(0 0 5px 5px); 
+
+            li{
+                float: left;
+                background: #f5ede8;
+                border-left: 1px solid #fff;
+                font-size: 15px;
+                line-height: 25px;
+                font-weight: 700;
+                color: #7b6d5e;
+                text-align: center;
+                text-transform: uppercase;
+                padding-bottom: 200px;
+                margin-bottom: -200px;
+                width: 33.333%;
+
+                a {
+
+                    padding: 10px;
+                    color: #7b6d5e;
+                    padding: 10px;
+                    color: #7b6d5e;
+                    .flex-centered-items();
+
+                    &:hover,&:focus,&:active{
+                        color:#e05033;
+                    }
+                    i{
+                        font-size: 20px;
+                        margin-right: 5px;
+                    }
+                } 
+            } 
+        }
+    }
+
+}
