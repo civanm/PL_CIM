@@ -20,10 +20,20 @@ git clone --depth=1 https://github.com/civanm/PL_CIM.git <your-project-name>
 ```
 npm install
 ```
+#### Build the app
+you can use:
+```
+gulp build
+```
+or build it with minified files with:
+
+```
+gulp release
+```
 
 ### Running the App 
 
-Install a node.js tool called [http-server][http-server].  You can install http-server globally:
+Install a node.js tool called http-server. You can install http-server globally:
 
 ```
 sudo npm install -g http-server
