@@ -1,0 +1,17 @@
+<article class="widget-box sent-items">
+
+    <md-list>
+        <h2>{{'SENT_EMAILS' | translate}}</h2>
+        <md-list-item class="md-3-line" ng-repeat="item in vm.sentItems">
+            <div class="avatar">
+                <img ng-src="./static_content/images/{{item.avatar}}" alt="" />
+            </div>
+            <div class="md-list-item-text" flex="70" flex-sm="50">
+                <h3>{{ item.subject }}</h3>
+                <h4>{{ item.to }}</h4>
+                <p>{{ item.message }}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+    
+</article>

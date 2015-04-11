@@ -1,0 +1,144 @@
+<article class="widget-box tabs">
+    <md-tabs md-selected="selectedIndex" md-border-bottom>
+        <md-tab label="{{'TAB_STATUS_DAILY' | translate}}">
+            <div class="content-tab tab1">
+                <div class="chart-holder">
+                    <div class="donut-chart-block block">
+                        <h2>{{'DATA_TRANSFER' | translate}}</h2>
+                        <div class="donut-chart">
+                            <div id="porcion1" class="slice">
+                                <div class="quesito ios" data-rel="21"></div>
+                            </div>
+                            <div id="porcion2" class="slice">
+                                <div class="quesito mac" data-rel="39"></div>
+                            </div>
+                            <div id="porcion3" class="slice">
+                                <div class="quesito win" data-rel="31"></div>
+                            </div>
+                            <div id="porcionFin" class="slice">
+                                <div class="quesito linux" data-rel="9"></div>
+                            </div>
+                            <p class="center-date">
+                                <span class="small-title">{{vm.daily.files}} {{'FILES' | translate}}</span>
+                                <span class="medium-title">{{vm.daily.space}}GB</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <md-list>
+                        <md-item>
+                            <md-button href="#" class="audio">
+                                <h6>{{'AUDIO' | translate}}</h6>
+                                <h2>{{vm.daily.audio}}%</h2>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#" class="video">
+                                <h6>{{'VIDEO' | translate}}</h6>
+                                <h2>{{vm.daily.video}}%</h2>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#" class="photo">
+                                <h6>{{'PHOTO' | translate}} </h6>
+                                <h2>{{vm.daily.photo}}%</h2>
+                            </md-button>
+                        </md-item>
+                    </md-list>
+                    <!-- extra bottom links -->
+                    <md-list class="bottom-links">
+                        <md-item>
+                            <md-button href="#">
+                                <i class="icon-earth  "></i>
+                                <span>{{'UPLOAD_FILES' | translate}} </span>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#">
+                                <i class="icon-location"></i>
+                                <span>{{'SHARE_LINK' | translate}} </span>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#">
+                                <i class="icon-history "></i>
+                                <span>{{'BACKUP' | translate}} </span>
+                            </md-button>
+                        </md-item>
+                    </md-list>
+                </footer>
+            </div>
+        </md-tab>
+        <md-tab label="{{'TAB_STATUS_MONTHLY' | translate}}">
+            <div class="content-tab tab1">
+                <div class="chart-holder">
+                    <div class="donut-chart-block block">
+                        <h2>{{'DATA_TRANSFER' | translate}}</h2>
+                        <div class="donut-chart">
+                            <div id="porcion1" class="slice">
+                                <div class="quesito ios" data-rel="21"></div>
+                            </div>
+                            <div id="porcion2" class="slice">
+                                <div class="quesito mac" data-rel="39"></div>
+                            </div>
+                            <div id="porcion3" class="slice">
+                                <div class="quesito win" data-rel="31"></div>
+                            </div>
+                            <div id="porcionFin" class="slice">
+                                <div class="quesito linux" data-rel="9"></div>
+                            </div>
+                            <p class="center-date">
+                                <span class="small-title">{{vm.monthly.files}} {{'FILES' | translate}}</span>
+                                <span class="medium-title">{{vm.monthly.space}}GB</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <md-list>
+                        <md-item>
+                            <md-button href="#" class="audio">
+                                <h6>{{'AUDIO' | translate}}</h6>
+                                <h2>{{vm.monthly.audio}}%</h2>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#" class="video">
+                                <h6>{{'VIDEO' | translate}}</h6>
+                                <h2>{{vm.monthly.video}}%</h2>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#" class="photo">
+                                <h6>{{'PHOTO' | translate}} </h6>
+                                <h2>{{vm.monthly.photo}}%</h2>
+                            </md-button>
+                        </md-item>
+                    </md-list>
+                    <!-- extra bottom links -->
+                    <md-list class="bottom-links">
+                        <md-item>
+                            <md-button href="#">
+                                <i class="icon-earth  "></i>
+                                <span>{{'UPLOAD_FILES' | translate}} </span>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#">
+                                <i class="icon-location"></i>
+                                <span>{{'SHARE_LINK' | translate}} </span>
+                            </md-button>
+                        </md-item>
+                        <md-item>
+                            <md-button href="#">
+                                <i class="icon-history "></i>
+                                <span>{{'BACKUP' | translate}} </span>
+                            </md-button>
+                        </md-item>
+                    </md-list>
+                </footer>
+            </div>
+        </md-tab>
+    </md-tabs>
+</article>

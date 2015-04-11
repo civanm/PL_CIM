@@ -1,20 +1,33 @@
+
 <article class="widget-box profile">
     <div class="cover-image">
-        <img src="./static_content/images/profile/cover_image_2.jpg" alt=""/>
+        <img ng-src="./static_content/images/{{vm.profile.cover}}" alt="" />
     </div>
     <div class="box-content">
         <div class="avatar">
-            <img src="./static_content/images/profile/cim_avatar.jpeg" alt=""/>
+            <img ng-src="./static_content/images/{{vm.profile.avatar}}" alt="" />
         </div>
-        <h3>John Raymons</h3>
-        <h6>Your talent amazes! This is awesome. Excited to see the final product.</h6>
+        <h3>{{vm.profile.name}}</h3>
+        <h6>{{vm.profile.status}}</h6>
     </div>
     <footer>
-        <ul>
-            <li class="views"><a href="#" ><span><i class="icon-eye"></i>172</span></a></li>
-            <li class="comments"><a href="#" ><span><i class="icon-bubble"></i>34</span></a></li>
-            <li class="likes"><a href="#"><span><i class="icon-heart"></i>210</span></a></li>
-        </ul>
+        <md-list>
+            <md-item class="views">
+                <md-button href="#">
+                    <span><i class="icon-eye"></i>{{vm.profile.counters.views}}</span>
+                </md-button>
+            </md-item>
+            <md-item class="comments">
+                <md-button href="#">
+                    <span><i class="icon-bubble"></i>{{vm.profile.counters.comments}}</span>
+                </md-button>
+            </md-item>
+            <md-item class="likes">
+                <md-button href="#">
+                    <span><i class="icon-heart"></i>{{vm.profile.counters.likes}}</span>
+                </md-button>
+            </md-item>
+        </md-list>
     </footer>
 
 </article>

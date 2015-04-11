@@ -30,6 +30,11 @@ gulp.task('static_content', function () {
             .pipe(gulp.dest('release/static_content'));
 });
 
+gulp.task('api_content', function () {
+    return gulp.src(['API/**/'])
+            .pipe(gulp.dest('release/API'));
+});
+
 // JSHint task
 gulp.task('jshint', function () {
     gulp.src(['app/*.js', 'app/js/**/*.js'])
@@ -88,13 +93,14 @@ gulp.task('clean', function () {
 });
 
 //default task run it use: gulp
-gulp.task('default', ['jshint', 'js', 'views','static_content', 'less', 'watch']);
+gulp.task('default', ['jshint', 'js', 'views','static_content','api_content', 'less', 'watch']);
 
-gulp.task('build', ['jshint', 'js', 'clean', 'views', 'less', 'content']);
+gulp.task('build', ['jshint', 'js', 'clean', 'views', 'less', 'static_content','api_content']);
 
 // Rerun the task when a file changes
 gulp.task('watch', function () {
     gulp.watch('app/less/**/*.less', ['less']);
     gulp.watch(['app/js/*.js', 'app/js/**/*.js'], ['jshint', 'js']);
-    gulp.watch(['app/views/**/*', 'app/*.html'], ['views', 'static_content']);
+    gulp.watch(['app/views/**/*', 'app/*.html'], ['views', 'static_content']);    
+    gulp.watch(['API/**/*'], ['api_content']);
 });

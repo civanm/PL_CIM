@@ -1,9 +1,9 @@
 (function () {
     'use strict';
-    require('./router.config');
+    require('./translate.config');
     
     angular.module('app.core', [
-        'app.router',
+        'app.translate',
         'ngAnimate'
     ]);
     require('./dataservice');

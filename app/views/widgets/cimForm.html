@@ -1,0 +1,25 @@
+<article class="widget-box widget-form">
+    <h2>{{'NEW_EMAIL' | translate}}</h2>
+    <form name="email">
+
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>{{'EMAIL' | translate}}</label>
+                <input required type="email" ng-model="vm.email.to">
+            </md-input-container>
+        </div>
+        <md-input-container flex>
+            <label>{{'SUBJECT' | translate}}</label>
+            <input required ng-model="vm.email.subject" md-maxlength="35">
+        </md-input-container>
+
+        <md-input-container flex>
+            <label>{{'MESSAGE' | translate}}</label>
+            <textarea ng-model="vm.email.message" columns="3" md-maxlength="500"></textarea>
+        </md-input-container>
+
+        <section class="bottom-sec" layout="row" layout-sm="column" layout-align="center right">
+            <md-button type="submit" class="md-raised md-warn" ng-click="vm.sendEmail(vm.email)">{{'SEND_EMAIL' | translate}}</md-button>
+        </section>
+    </form>
+</article>

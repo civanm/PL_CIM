@@ -3,19 +3,20 @@
 
     angular
             .module('app.widgets')
-            .directive('cimProfileCard', cimProfileCard);
+            .directive('cimTopNav', cimTopNav);
 
-    function cimProfileCard() {
+    function cimTopNav() {
         var directive = {
             link: link,
+            scope: {
+            },
             replace: true,
-            templateUrl: 'views/widgets/cimProfileCard.html',
+            templateUrl: 'views/widgets/cimTopNav.html',
             restrict: 'AE'
         };
         return directive;
 
         function link(scope, element, attrs) {
-            // attrs.$set('class', 'plenty-logo');
         }
 
     }

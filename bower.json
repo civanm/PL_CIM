@@ -18,7 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-material": "~0.8.3"
+    "angular-translate": "~2.6.1"
   },
   "exportsOverride": {
     "*": {

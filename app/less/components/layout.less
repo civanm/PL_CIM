@@ -1,0 +1,62 @@
+.container-well {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {}
+}
+/* Toolbar area */
+
+header {
+    border-bottom: 1px solid #e4dbca;
+    md-toolbar {
+        .box-shadow(none);
+        &.md-default-theme {
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .change-lang {
+            position: absolute;
+            right: 30px;
+            top: 15px;
+            border: 1px solid @line-border-color;
+            border-left-width: 1px;
+            font-size: 1rem;
+            width: 60px;
+            i {
+                margin-right: 5px;
+            }
+        }
+        h1 {
+            margin: auto 15px;
+            font-size: 3rem;
+            text-shadow: 2px 0 3px #fff;
+            color: #D3A789;
+            letter-spacing: -3px;
+        }
+        .menu {
+            background-color: transparent;
+            border: none;
+            height: 38px;
+            margin: 16px;
+            width: 36px;
+        }
+        .icon-bar {
+            background-color: #fff;
+        }
+        .icon-bar+.icon-bar {
+            margin-top: 4px;
+        }
+        .icon-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+        }
+    }
+}
+
+footer.main-footer {
+    border-top: 1px solid @line-border-color;
+    min-height: 100px;
+}

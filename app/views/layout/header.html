@@ -1,10 +1,17 @@
-<md-toolbar layout="row">
-    <md-button class="menu" hide-gt-sm ng-click="shell.toggleSidenav()">
-        <a md-svg-icon="menu" >
+<md-toolbar layout="row" class="container-well">
+    <md-button class="menu" hide-gt-sm ng-click="vm.toggleSidenav()" aria-label>
+        <a md-svg-icon="menu">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </a>
     </md-button>
-    <h1>PL CIM Application??</h1>
+    
+    <h1>C - I'M</h1>
+
+    <md-button class="change-lang" ng-click="vm.toggleLang()">
+      <i class="icon-earth"></i>  <span>{{vm.currentLang}}</span>
+
+    </md-button>
+
 </md-toolbar>
