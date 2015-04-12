@@ -21,7 +21,7 @@ git clone --depth=1 https://github.com/civanm/PL_CIM.git <your-project-name>
 npm install
 ```
 #### Build the app
-you can use:
+After installing the package dependencies, it's time to build our application, do it running the gulps tasks:
 ```
 gulp build
 ```
