@@ -2,8 +2,8 @@
     "profile": {
         "name": "John Raymons",
         "status": "Your talent amazes! This is awesome. Excited to see the final product.",
-        "cover": "profile/cover_image_2.jpg",
-        "avatar": "profile/cim_avatar.jpeg",
+        "cover": "profile/cover_2.jpg",
+        "avatar": "avatars/profile.jpeg",
         "counters": {
             "views": "120",
             "comments": "36",
