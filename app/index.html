@@ -18,19 +18,22 @@
         <header ng-include="'./views/layout/header.html'"> </header>
         <aside ng-include="'./views/layout/side-nav.html'"> </aside>
         <section  flex layout="row"  layout-sm="column" layout-margin layout-padding class="container-well">
+            
             <div flex flex-gt-md="35" layout="column">
                 <section>
                     <article data-cim-profile-card ></article>
                     <article data-cim-chart-tabs ></article>                    
                 </section>
-
             </div>
+            
             <div flex>
                 <nav data-cim-top-nav  hide-sm></nav>
                 <article data-cim-form> </article>
                 <article data-cim-sent-items> </article>
             </div>
+            
         </section>
+        
         <footer class="main-footer"  ng-include="'./views/layout/footer.html'"></footer>
         
         <script src="js/bundle.js" type="text/javascript"></script>

@@ -14,12 +14,7 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer');
 
-
-gulp.task('bower', function () {
-    return bower()
-        .pipe(gulp.dest('vendor/'));
-});
-
+//builds less into css files and move them to release
 gulp.task('less', function () {
     return gulp.src('app/less/*.less')
         .pipe(less({
@@ -27,11 +22,14 @@ gulp.task('less', function () {
         }))
         .pipe(gulp.dest('release/css'));
 });
+
+//moves all the static content (images/* fonts/*)
 gulp.task('static_content', function () {
     return gulp.src(['app/static_content/**/', 'app/static_content/*'])
         .pipe(gulp.dest('release/static_content'));
 });
 
+//moves the api simulated files to release
 gulp.task('api_content', function () {
     return gulp.src(['API/**/'])
         .pipe(gulp.dest('release/API'));
@@ -45,6 +43,7 @@ gulp.task('jshint', function () {
     //.pipe(jshint.reporter('fail'));
 });
 
+//creates the bundle file and bundle.js.map
 gulp.task('js', function () {
     var bundle = function () {
         return browserify({
@@ -65,7 +64,7 @@ gulp.task('js', function () {
     return bundle();
 });
 
-
+//minifies the bundle file and annotates angular injected modules
 gulp.task('uglify', function () {
     gulp.src('./release/js/*.js')
         .pipe(ngAnnotate())
@@ -73,12 +72,14 @@ gulp.task('uglify', function () {
         .pipe(gulp.dest('./release/js'));
 });
 
+//minifies the css generated
 gulp.task('cssmin', function () {
     gulp.src('./release/css/*.css')
         .pipe(cssmin())
         .pipe(gulp.dest('./release/css'));
 });
 
+//minifies the html views
 gulp.task('minify-html', function () {
     var opts = {
         conditionals: true,
@@ -92,32 +93,23 @@ gulp.task('minify-html', function () {
 
 // Views task
 gulp.task('views', function () {
-    // Get our index.html
+    //index should be moved separately
     gulp.src('./app/index.html')
-        // And put it in the release folder
         .pipe(gulp.dest('release/'));
 
     // Any other view files from /views
     gulp.src('./app/views/**/*')
-        // Will be put in the release/views folder
         .pipe(gulp.dest('release/views/'));
 });
 
-// Clean task
-gulp.task('clean', function () {
-    gulp.src('./release/views', {
-            read: false
-        }) // much faster
-        .pipe(rimraf({
-            force: true
-        }));
-});
 
 //default task run it use: gulp
-gulp.task('default', ['jshint', 'js', 'views', 'static_content', 'api_content', 'less', 'watch']);
+gulp.task('default', ['build', 'watch']);
 
-//builds the project
+// 1. gulp build -> builds the project
 gulp.task('build', ['jshint', 'js', 'views', 'less', 'static_content', 'api_content']);
+
+//2. gulp release -> then minifies the generated files into release
 gulp.task('release', ['uglify', 'cssmin', 'minify-html']);
 
 // Rerun the task when a file changes
