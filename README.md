@@ -1,6 +1,6 @@
 # C - I'M
 
-demo page: [http://plentycode.com/CIM](http://plentycode.com/CIM/).
+Demo page: [http://plentycode.com/CIM](http://plentycode.com/CIM/).
 
 ## Getting Started
 
