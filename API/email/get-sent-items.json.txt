@@ -1,0 +1,20 @@
+[
+    {
+        "avatar": "avatars/neymar.jpg",
+        "to": "the.mail@mail.com",
+        "subject": "Hey, Nunc dictum ornare eros",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend ultrices massa vel lacinia. "
+    },
+    {
+        "avatar": "avatars/james.jpeg",
+       "to": "the.mail@mail.com",
+        "subject": "Hello Proin felis mi, ultricies ut lobortis ",
+        "message": "Suspendisse a ante sit amet mi ornare vestibulum vitae a metus"
+    },
+    {
+        "avatar": "avatars/messi.jpeg",
+        "to": "the.mail@mail.com",
+        "subject": "Hey, Etiam pretium posuere tortor nec tempor. ",
+        "message": "Etiam venenatis risus a mattis sodales. Aenean eu leo quis libero dictum luctus nec ut ante. "
+    }
+]
