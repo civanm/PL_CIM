@@ -3,7 +3,7 @@ require('angular-animate');
 require('angular-aria');
 require('angular-material');
 require('angular-ui-router');
-Chart= require('../../vendor/angular-translate/angular-translate');
+Chart= require('angular-translate');
 (function () {
     'use strict';
 
