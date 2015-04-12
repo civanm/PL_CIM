@@ -25,7 +25,7 @@ you can use:
 ```
 gulp build
 ```
-or build it with minified files with:
+and then to uglify and minify release files, run:
 
 ```
 gulp release
