@@ -333,7 +333,13 @@ md-sidenav {
         .md-list-item-text {
             margin-left: 20px;
             float: left;
-            width: 70%;
+            width: 90%;
+            @media (max-width: 991px) {
+                width: 60%;
+            }
+            @media (min-width: 992px) {
+                width: 80%;
+            }
             h3 {
                 margin-bottom: 0;
                 ont-size: 1.2em;
