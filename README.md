@@ -1,6 +1,15 @@
 # C - I'M
+## Getting Started
 
-Clone the repository using git:
+#### Prerequisites
+
+You will need **git** to clone the repository. You can get git from
+[http://git-scm.com/](http://git-scm.com/).
+
+You must have node.js and its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+
+#### Clone PL_CIM
+To get started, please clone the repository:
 
 ```
 git clone https://github.com/civanm/PL_CIM.git
