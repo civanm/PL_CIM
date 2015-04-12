@@ -4,7 +4,7 @@ Clone the repository using git:
 
 ```
 git clone https://github.com/civanm/PL_CIM.git
-cd material-start
+cd PL_CIM
 ```
 
 If you just want to start a new project:
