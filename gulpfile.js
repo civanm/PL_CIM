@@ -118,7 +118,7 @@ gulp.task('default', ['jshint', 'js', 'views', 'static_content', 'api_content', 
 
 //builds the project
 gulp.task('build', ['jshint', 'js', 'views', 'less', 'static_content', 'api_content']);
-gulp.task('release', ['uglify', 'cssmin', 'minify-html]);
+gulp.task('release', ['uglify', 'cssmin', 'minify-html']);
 
 // Rerun the task when a file changes
 gulp.task('watch', function () {
