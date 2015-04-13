@@ -12,6 +12,7 @@
         shell.toggleSidenav = function () {
             $mdSidenav('left').toggle();
         };
+        
         shell.toggleLang = function () {
             translateService.changeLang();
             shell.currentLang = translateService.currentLang();
@@ -20,10 +21,12 @@
         dataservice.getProfileInfo().then(function (data) {
             shell.profile = data.profile;
         });
+        
         dataservice.getStatistics().then(function (data) {
             shell.daily = data.day;
             shell.monthly = data.month;
         });
+        
         dataservice.getSentEmails().then(function (data) {
             shell.sentItems = data;
         });

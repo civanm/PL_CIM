@@ -6,8 +6,6 @@
     /* @ngInject */
     function Footer() {
         var model = this;
-
-
     }
 
 }());

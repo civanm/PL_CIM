@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    bower = require('gulp-bower'),
+    karma = require('karma').server,
     less = require('gulp-less'),
     uglify = require('gulp-uglify'),
     ngAnnotate = require('gulp-ng-annotate'),
@@ -21,6 +21,27 @@ gulp.task('less', function () {
             paths: [path.join(__dirname, 'less', 'includes')]
         }))
         .pipe(gulp.dest('release/css'));
+});
+
+
+// Run test once and exit
+gulp.task('test', function (done) {
+    karma.start({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, function (exitStatus) {
+        done();
+    });
+});
+
+
+// Watch for file changes and re-run tests on each change
+gulp.task('tdd', function (done) {
+    karma.start({
+        configFile: __dirname + '/karma.conf.js'
+    }, function (exitStatus) {
+        done();
+    });
 });
 
 //moves all the static content (images/* fonts/*)
@@ -58,7 +79,8 @@ gulp.task('js', function () {
                 loadMaps: true
             }))
             .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./release/js/'));
+            .pipe(gulp.dest('./release/js/'))
+            .on('error', swallowError);;
     };
 
     return bundle();
@@ -102,20 +124,28 @@ gulp.task('views', function () {
         .pipe(gulp.dest('release/views/'));
 });
 
+function swallowError(error) {
+
+    //If you want details of the error in the console
+    console.log(error.toString());
+
+    this.emit('end');
+}
+
 
 //default task run it use: gulp
 gulp.task('default', ['build', 'watch']);
 
 // 1. gulp build -> builds the project
-gulp.task('build', ['jshint', 'js', 'views', 'less', 'static_content', 'api_content']);
+gulp.task('build', ['jshint', 'test', 'js', 'views', 'less', 'static_content', 'api_content']);
 
 //2. gulp release -> then minifies the generated files into release
 gulp.task('release', ['uglify', 'cssmin', 'minify-html']);
 
 // Rerun the task when a file changes
 gulp.task('watch', function () {
-                gulp.watch('app/less/**/*.less', ['less']);
-                gulp.watch(['app/js/*.js', 'app/js/**/*.js'], ['jshint', 'js']);
-                gulp.watch(['app/views/**/*', 'app/*.html'], ['views', 'static_content']);
-                gulp.watch(['API/**/*'], ['api_content']);
-            });
+    gulp.watch('app/less/**/*.less', ['less']);
+    gulp.watch(['app/js/*.js', 'app/js/**/*.js'], ['jshint', 'test', 'js']);
+    gulp.watch(['app/views/**/*', 'app/*.html'], ['views', 'static_content']);
+    gulp.watch(['API/**/*'], ['api_content']);
+});
