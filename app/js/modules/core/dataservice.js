@@ -38,7 +38,7 @@
                     return response.data;
                 })
                 .catch(function () {
-                    console.error('Error trying to fetch statistics');
+                    console.error('Error trying to fetch sent items');
                 });
         }
 

@@ -1,8 +1,8 @@
-(function () {
+(function (angular) {
     'use strict';
     angular
-            .module('app.layout')
-            .controller('Home', Home);
+        .module('app.layout')
+        .controller('Home', Home);
 
     Home.$inject = [];
 

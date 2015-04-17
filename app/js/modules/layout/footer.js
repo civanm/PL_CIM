@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('app.layout')
-            .controller('Footer', Footer);
+        .controller('Footer', Footer);
 
     /* @ngInject */
     function Footer() {

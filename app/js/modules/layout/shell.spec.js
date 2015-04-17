@@ -7,6 +7,7 @@ require('./shell');
 var mocks = require('../../mocks/mocks');
 
 describe('Layout Shell', function () {
+    'use strict';
 
     var deferred, scope, shell, translateServiceMock, dataservice;
 

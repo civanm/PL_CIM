@@ -1,3 +1,4 @@
+
 var gulp = require('gulp'),
     karma = require('karma').server,
     less = require('gulp-less'),
@@ -80,7 +81,7 @@ gulp.task('js', function () {
             }))
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest('./release/js/'))
-            .on('error', swallowError);;
+            .on('error', swallowError);
     };
 
     return bundle();
