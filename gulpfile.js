@@ -143,7 +143,7 @@ gulp.task('build', ['jshint', 'test', 'js', 'views', 'less', 'static_content', '
 //2. gulp release -> then minifies the generated files into release
 gulp.task('release', ['uglify', 'cssmin', 'minify-html']);
 
-// Rerun the task when a file changes
+// Re-run the task when a file changes
 gulp.task('watch', function () {
     gulp.watch('app/less/**/*.less', ['less']);
     gulp.watch(['app/js/*.js', 'app/js/**/*.js'], ['jshint', 'test', 'js']);
