@@ -2,7 +2,7 @@
 
     <md-list>
         <h2>{{'SENT_EMAILS' | translate}}</h2>
-        <md-list-item class="md-3-line" ng-repeat="item in vm.sentItems">
+        <md-list-item class="md-3-line" ng-animate="'animate'" ng-repeat="item in vm.sentItems">
             <div class="avatar">
                 <img ng-src="./static_content/images/{{item.avatar}}" alt="" />
             </div>
@@ -13,5 +13,5 @@
             </div>
         </md-list-item>
     </md-list>
-    
+
 </article>

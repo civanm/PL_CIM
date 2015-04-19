@@ -2,8 +2,8 @@
     'use strict';
 
     angular
-            .module('app.widgets')
-            .directive('cimProfileCard', cimProfileCard);
+        .module('app.widgets')
+        .directive('cimProfileCard', cimProfileCard);
 
     function cimProfileCard() {
         var directive = {
@@ -15,7 +15,6 @@
         return directive;
 
         function link(scope, element, attrs) {
-            // attrs.$set('class', 'plenty-logo');
         }
 
     }

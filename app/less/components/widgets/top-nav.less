@@ -1,0 +1,82 @@
+//top-nav
+.top-nav {
+    md-list {
+        md-item {
+            float: left;
+            width: 25%;
+            position: relative;
+            border-left: 1px solid #F8F3F0;
+            &:first-child {
+                border-left: none;
+            }
+            a {
+                .flex-centered-items();
+                font-size: 17px;
+                line-height: 30px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                color: #8e8071;
+                padding: 18px 23px 12px 16px;
+                border-bottom: 3px solid transparent;
+                i {
+                    font-size: 1.5em;
+                }
+                span {
+                    margin-left: 8px;
+                }
+                &.selected {
+                    background: #f8f3f0;
+                    border-bottom: 3px solid #4daf7b;
+                    color: #8e8071;
+                    .border-radius(5px 0 0 0);
+                }
+            }
+        }
+    }
+    .counter {
+        display: block;
+        width: 13px;
+        height: 13px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 15px;
+        z-index: 10;
+        text-align: center;
+        font-size: 9px;
+        font-weight: 700;
+        line-height: 13px;
+        color: #fff;
+        background: #e55e3a;
+        .border-radius(50%);
+    }
+}
+/* Sidenav area */
+
+md-sidenav {
+    .widget-box {
+        background: inherit;
+        box-shadow: none;
+    }
+    .top-nav {
+        md-list {
+            md-item {
+                width: 100%;
+                a.md-button {
+                    color: inherit;
+                    font-weight: 500;
+                    text-align: left;
+                    width: 100%;
+                    display: block;
+                    &.selected {
+                        background: #f8f3f0;
+                        color: #8e8071;
+                        border-bottom: inherit;
+                        border-left: 3px solid #4daf7b;
+                    }
+                }
+            }
+        }
+    }
+}

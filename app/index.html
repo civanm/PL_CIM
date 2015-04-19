@@ -1,42 +1,43 @@
 <!doctype html>
 <html class="no-js" lang="en" data-ng-app="app">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>PL CIM</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PL CIM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
 
-        <link href="css/app-styles.css" rel="stylesheet" type="text/css" />
-        <base href="./">
-    </head>
+    <link href="css/app-styles.css" rel="stylesheet" type="text/css" />
+    <base href="./">
+</head>
 
-    <body data-ng-controller="Shell as vm">
-        <header ng-include="'./views/layout/header.html'"> </header>
-        <aside ng-include="'./views/layout/side-nav.html'"> </aside>
-        <section  flex layout="row"  layout-sm="column" layout-margin layout-padding class="container-well">
-            
-            <div flex flex-gt-md="35" layout="column">
-                <section>
-                    <article data-cim-profile-card ></article>
-                    <article data-cim-chart-tabs ></article>                    
-                </section>
-            </div>
-            
-            <div flex>
-                <nav data-cim-top-nav  hide-sm></nav>
-                <article data-cim-form> </article>
-                <article data-cim-sent-items> </article>
-            </div>
-            
-        </section>
-        
-        <footer class="main-footer"  ng-include="'./views/layout/footer.html'"></footer>
-        
-        <script src="js/bundle.js" type="text/javascript"></script>
-    </body>
+<body data-ng-controller="Shell as vm">
+    <header ng-include="'./views/layout/header.html'"> </header>
+    <aside ng-include="'./views/layout/side-nav.html'"> </aside>
+    <section flex layout="row" layout-sm="column" layout-margin layout-padding class="container-well">
+
+        <div flex flex-gt-md="35" layout="column">
+            <section>
+                <cim-profile-card></cim-profile-card>
+                <cim-chart-tabs></cim-chart-tabs>
+            </section>
+        </div>
+
+        <div flex>
+            <cim-top-nav hide-sm></cim-top-nav>
+            <section ui-view class="page-box">
+          
+            </section>
+        </div>
+
+    </section>
+
+    <footer class="main-footer" ng-include="'./views/layout/footer.html'"></footer>
+
+    <script src="js/bundle.js" type="text/javascript"></script>
+</body>
 
 </html>

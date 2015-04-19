@@ -1,0 +1,39 @@
+
+//animates the all movements by default
+.page-box{
+    .transition(all .3s ease);
+}
+
+//page transition
+.page-box {
+    &.ng-enter,
+    &.ng-leave {}
+    &.ng-enter {
+        opacity: 0;
+        -webkit-transform: scale3d(0.5, 0.5, 0.5);
+        -moz-transform: scale3d(0.5, 0.5, 0.5);
+        transform: scale3d(0.5, 0.5, 0.5);
+    }
+    &.ng-enter-active {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    &.ng-leave {
+        opacity: 1;
+        /*padding-left: 0px;*/
+        
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    &.ng-leave-active {
+        opacity: 0;
+        /*padding-left: 100px;*/
+        
+        -webkit-transform: translate3d(100px, 0, 0);
+        -moz-transform: translate3d(100px, 0, 0);
+        transform: translate3d(100px, 0, 0);
+    }
+}
