@@ -7,6 +7,10 @@
 
     function cimForm() {
         var directive = {
+            scope:{
+                email:'=',
+                sendEmail:'&'
+            },
             link: link,
             replace: true,
             templateUrl: 'views/widgets/cimForm.html',

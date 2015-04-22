@@ -7,6 +7,9 @@
 
     function cimProfileCard() {
         var directive = {
+            scope:{
+                profile:'='
+            },
             link: link,
             replace: true,
             templateUrl: 'views/widgets/cimProfileCard.html',

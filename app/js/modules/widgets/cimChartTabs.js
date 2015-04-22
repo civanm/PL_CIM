@@ -7,6 +7,10 @@
 
     function cimChartTabs() {
         var directive = {
+            scope:{
+                daily:'=',
+                monthly:'='
+            },
             link: link,
             replace: true,
             templateUrl: 'views/widgets/cimChartTabs.html',

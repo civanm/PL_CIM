@@ -21,8 +21,9 @@
 
         <div flex flex-gt-md="35" layout="column">
             <section>
-                <cim-profile-card></cim-profile-card>
-                <cim-chart-tabs></cim-chart-tabs>
+                <cim-profile-card profile="vm.profile">
+                </cim-profile-card>
+                <cim-chart-tabs daily="vm.daily" monthly="vm.monthly"></cim-chart-tabs>
             </section>
         </div>
 

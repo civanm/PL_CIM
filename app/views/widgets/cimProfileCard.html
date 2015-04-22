@@ -1,30 +1,30 @@
 
 <article class="widget-box profile">
     <div class="cover-image">
-        <img ng-src="./static_content/images/{{vm.profile.cover}}" alt="" />
+        <img ng-src="./static_content/images/{{profile.cover}}" alt="" />
     </div>
     <div class="box-content">
         <div class="avatar">
-            <img ng-src="./static_content/images/{{vm.profile.avatar}}" alt="" />
+            <img ng-src="./static_content/images/{{profile.avatar}}" alt="" />
         </div>
-        <h3>{{vm.profile.name}}</h3>
-        <h6>{{vm.profile.status}}</h6>
+        <h3>{{profile.name}}</h3>
+        <h6>{{profile.status}}</h6>
     </div>
     <footer>
         <md-list>
             <md-item class="views">
                 <md-button href="#">
-                    <span><i class="icon-eye"></i>{{vm.profile.counters.views}}</span>
+                    <span><i class="icon-eye"></i>{{profile.counters.views}}</span>
                 </md-button>
             </md-item>
             <md-item class="comments">
                 <md-button href="#">
-                    <span><i class="icon-bubble"></i>{{vm.profile.counters.comments}}</span>
+                    <span><i class="icon-bubble"></i>{{profile.counters.comments}}</span>
                 </md-button>
             </md-item>
             <md-item class="likes">
                 <md-button href="#">
-                    <span><i class="icon-heart"></i>{{vm.profile.counters.likes}}</span>
+                    <span><i class="icon-heart"></i>{{profile.counters.likes}}</span>
                 </md-button>
             </md-item>
         </md-list>
