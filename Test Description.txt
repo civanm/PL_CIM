@@ -1,0 +1,121 @@
+Carlos Iván Mercado Test
+
+April 27th, 2015
+
+Test Description:
+	This project was created as a test to appy for a front end position;
+	The source code, demo page and more details can be found here: [ https://github.com/civanm/PL_CIM ]
+
+Why these Widgets:
+	The idea was to take the widgedts I though were related and make a page functional, the choosen ones were:
+	 -> The profile card: the page has the main information of the user 'logged in'
+	 -> Form: user can send emails to his/her contacts and the ability to see the already sent
+	 -> Charts tabs -> detailed statistics information related with the data usage, seemed to be a good widget to have in the page.
+	 -> Top-Nav: it allows to the user to navigate between site's pages it is necessary in any page, it changes location and styles on mobile devices.
+
+Technologies:
+
+	- Angular JS as single page application aproach
+	- Gulp to run automated task needed to the site develoment.
+	- browserify used to require the application modules and node vendor files.
+	- karma, jazmine, for unit testing and tdd.
+	- angular-material, for the visual and grid layout
+	- less, css pre-processor,that extends the CSS language, adding features that allow variables, mixins, functions and more.
+
+Files Structure:
+	PL_CIM
+		API 	--> Mocked JSON files to simulate server responses
+			email
+				- get-sent-items.json
+			profile
+				- get-info.json
+			statistics
+				- get-data-transfer.json
+
+		app 	--> all of the source files for the application
+
+			js -->  application javascript files
+
+				index.js --> loads all modules needed for application
+
+				mocks --> helper files to mock services when unit testing
+					- mocks.js
+
+				modules --> different modules for the app
+					core --> core functionality
+						- core.module.js
+						- dataservice.js
+						- dataservice.spec.js
+						- router.js
+						- translate.js
+						- translate.spec.js
+
+					layout --> application layout related files
+						- footer.js
+						- layout.module.js
+						- shell.js
+						- shell.spec.js
+
+					widgets --> components treated as directives
+						- cimChartTabs.js
+						- cimForm.js
+						- cimProfileCard.js
+						- cimSentItems.js
+						- cimTopNav.js
+						- widgets.module.js
+
+			less --> less application related files 
+				components --> here goes the less widget's files
+					widgets
+						- all.less
+						- form.less
+						- profile.less
+						- tabs.less
+						- top-nav.less
+
+					- animations.less
+					- base.less
+					- graphics.less
+					- icons.less
+					- icons.less
+					- layout.less
+
+				utilities --> less mixins and helpers
+					- constants.less
+					- helpers.less
+					- imports.less
+					- resets.less
+
+				app-styles.less --> main less files to be exported as css for the site
+
+			static_content --> files that are not modified regularly
+				fonts
+
+				images
+
+			views --> html related files
+				layout 
+					- footer.html
+					- header.html
+					- side-nav.html
+
+				pages
+					- account.html
+					- events.html
+					- home.html
+					- settings.html
+
+				widgets
+					- cimChartTabs.html
+					- cimForm.html
+					- cimProfile.html
+					- cimSentItems.html
+					- cimTopNav.html
+
+				index.html
+
+
+
+
+
+

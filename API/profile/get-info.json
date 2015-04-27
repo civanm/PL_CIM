@@ -1,0 +1,13 @@
+[{
+    "profile": {
+        "name": "John Raymons",
+        "status": "Your talent amazes! This is awesome. Excited to see the final product.",
+        "cover": "profile/cover_2.jpg",
+        "avatar": "avatars/profile.jpeg",
+        "counters": {
+            "views": "120",
+            "comments": "36",
+            "likes": "254"
+        }
+    }
+}]

@@ -17,7 +17,7 @@
 		return service;
 
 		function getProfileInfo() {
-			return $http.get('API/profile/get-info.json.txt').then(function (response) {
+			return $http.get('API/profile/get-info.json').then(function (response) {
 					return response.data[0];
 				})
 				.catch(function () {
@@ -26,7 +26,7 @@
 		}
 
 		function getStatistics() {
-			return $http.get('API/statistics/get-data-transfer.json.txt').then(function (response) {
+			return $http.get('API/statistics/get-data-transfer.json').then(function (response) {
 					return response.data[0];
 				})
 				.catch(function () {
@@ -43,7 +43,7 @@
 		function getSentEmails() {
 			 /*jshint validthis:true */
 			var self= this;
-			return $http.get('API/email/get-sent-items.json.txt').then(function (response) {
+			return $http.get('API/email/get-sent-items.json').then(function (response) {
 					self.sentItems= response.data;
 					return response.data;
 				})
