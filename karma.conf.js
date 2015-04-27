@@ -4,7 +4,7 @@ module.exports = function (config) {
         plugins: ['karma-*'],
         frameworks: ['jasmine', 'browserify'],
         preprocessors: {
-            'app/js/**/*.js': ['browserify']
+            'app/js/**/*.spec.js': ['browserify']
         },
         files: [
           'app/js/**/*.spec.js'

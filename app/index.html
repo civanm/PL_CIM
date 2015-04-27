@@ -15,22 +15,20 @@
 </head>
 
 <body data-ng-controller="Shell as vm">
-    <header ng-include="'./views/layout/header.html'"> </header>
+    <header ng-include="'./views/layout/header.html'" class="fade"> </header>
     <aside ng-include="'./views/layout/side-nav.html'"> </aside>
     <section flex layout="row" layout-sm="column" layout-margin layout-padding class="container-well">
 
         <div flex flex-gt-md="35" layout="column">
             <section>
-                <cim-profile-card profile="vm.profile">
-                </cim-profile-card>
-                <cim-chart-tabs daily="vm.daily" monthly="vm.monthly"></cim-chart-tabs>
+                <cim-profile-card class="fade"></cim-profile-card>
+                <cim-chart-tabs class="fade"></cim-chart-tabs>
             </section>
         </div>
 
         <div flex>
             <cim-top-nav hide-sm></cim-top-nav>
-            <section ui-view class="page-box">
-          
+            <section ui-view class="page-box">          
             </section>
         </div>
 

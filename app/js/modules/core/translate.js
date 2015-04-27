@@ -1,4 +1,6 @@
 (function () {
+    require('angular-translate');
+    
     angular.module('app.translate', ['pascalprecht.translate'])
         .config(config)
         .factory('translateService', translateService);

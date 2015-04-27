@@ -65,44 +65,5 @@ describe('Layout Shell', function () {
         });
 
     });
-    describe('send email', function () {
-        it('should have a send email func', function () {
-            expect(shell.sendEmail).toBeDefined();
-        });
-
-        it('should add an email to the sent email list', function () {
-            shell.sentItems = [];
-
-            var email = {
-                to: 'cim@gmail.com',
-                subject: 'subject',
-                message: 'message'
-            };
-
-            expect(shell.sentItems.length).toEqual(0);
-
-            //callls the main func
-            shell.sendEmail(email);
-
-            expect(shell.sentItems.length).toEqual(1);
-        });
-        
-        it('should not add the email to the sentEmail when no email is entered', function () {
-            shell.sentItems = [];
-
-            var email = {
-                subject: 'subject',
-                message: 'message'
-            };
-
-            expect(shell.sentItems.length).toEqual(0);
-
-            //callls the main func
-            shell.sendEmail(email);
-
-            expect(shell.sentItems.length).toEqual(0);
-        });
-
-    });
 
 });

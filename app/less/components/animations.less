@@ -1,11 +1,11 @@
 
 //animates the all movements by default
-.page-box{
+.page-box , .fade, .avatar, md-list-item *, .donut-chart *{
     .transition(all .3s ease);
 }
 
 //page transition
-.page-box {
+.page-box,  {
     &.ng-enter,
     &.ng-leave {}
     &.ng-enter {
@@ -35,5 +35,69 @@
         -webkit-transform: translate3d(100px, 0, 0);
         -moz-transform: translate3d(100px, 0, 0);
         transform: translate3d(100px, 0, 0);
+    }
+}
+md-list-item{
+    &:hover {
+        .avatar{
+        transform: scale3d(1.3, 1.3, 1);
+        -webkit-transform: scale3d(1.3, 1.3, 1);
+        -moz-transform: scale3d(1.3, 1.3, 1);
+        }
+        .md-list-item-text{
+            margin-left: 2em !important;
+        }
+    }
+}
+.avatar, .slice{
+    &:hover{
+        transform: scale3d(1.3, 1.3, 1);
+        -webkit-transform: scale3d(1.3, 1.3, 1);
+        -moz-transform: scale3d(1.3, 1.3, 1);
+        cursor: pointer;
+
+    }
+}
+
+.fade{
+    opacity: 0;
+}
+.fade{
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s; 
+    -webkit-animation: fadein 1.5s;
+    -o-animation: fadein 1.5s;
+    opacity: 1;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
     }
 }

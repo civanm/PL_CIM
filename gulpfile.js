@@ -80,8 +80,7 @@ gulp.task('js', function () {
                 loadMaps: true
             }))
             .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./release/js/'))
-            .on('error', swallowError);
+            .pipe(gulp.dest('./release/js/'));
     };
 
     return bundle();
