@@ -56,3 +56,5 @@ Then you can start your own development web server to serve static files from a 
 ```
 cd release
 http-server -a localhost -p 8000
+```
+Then you can browse localhost:8000 in your preferred browser and see the site running.
