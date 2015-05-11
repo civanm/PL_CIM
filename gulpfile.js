@@ -160,7 +160,7 @@ gulp.task('build:release', function () {
 gulp.task('deploy', function () {
     runSequence(
         ['build'],
-        ['uglify', 'cssmin', 'minify-html'],
+        ['uglify', 'minify-html'],
         'start-server'
         );
 });
