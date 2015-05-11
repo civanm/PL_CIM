@@ -41,7 +41,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "gulp build:release",
+    "postinstall": "gulp build",
     "prestart": "npm update"
   },
   "author": "Carlos I Mercado",

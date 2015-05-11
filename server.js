@@ -8,7 +8,7 @@ app.use(bodyParser.json({ extended: true }));       // to support JSON-encoded b
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 
 //routes
-app.use(express.static(__dirname + '/release/'));
+app.use(express.static(__dirname + '/release'));
 
 //application port it takes localhost:2000 when is running locally
 app.set('port', (process.env.PORT || 2000));

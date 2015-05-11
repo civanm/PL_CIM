@@ -159,7 +159,7 @@ gulp.task('build:release', function () {
 //deploy task
 gulp.task('deploy', function () {
     runSequence(
-        ['js', 'views', 'less', 'static_content', 'api_content'],
+        ['build'],
         ['uglify', 'cssmin', 'minify-html'],
         'start-server'
         );
