@@ -13,7 +13,9 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     rimraf = require('gulp-rimraf'),
     source = require('vinyl-source-stream'),
-    buffer = require('vinyl-buffer');
+    buffer = require('vinyl-buffer'),
+    runSequence = require('run-sequence').use(gulp),
+    nodemon = require('gulp-nodemon');
 
 //builds less into css files and move them to release
 gulp.task('less', function () {
@@ -141,6 +143,27 @@ gulp.task('build', ['jshint', 'test', 'js', 'views', 'less', 'static_content', '
 
 //2. gulp release -> then minifies the generated files into release
 gulp.task('release', ['uglify', 'cssmin', 'minify-html']);
+
+gulp.task('start-server', function () {
+    nodemon({
+        script: 'server.js',
+        ext: 'js html'
+    });
+});
+gulp.task('build:release', function () {
+    runSequence(
+        ['js', 'views', 'less', 'static_content', 'api_content'],
+        ['uglify', 'cssmin', 'minify-html']
+        );
+});
+//deploy task
+gulp.task('deploy', function () {
+    runSequence(
+        ['js', 'views', 'less', 'static_content', 'api_content'],
+        ['uglify', 'cssmin', 'minify-html'],
+        'start-server'
+        );
+});
 
 // Re-run the task when a file changes
 gulp.task('watch', function () {
