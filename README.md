@@ -1,6 +1,6 @@
 # C - I'M
 
-Demo page: [http://plentycode.com/CIM](http://plentycode.com/CIM/).
+Demo page: [http://plentycode.com/CIM](http://cim-plentycode.herokuapp.com/).
 
 ## Getting Started
 
